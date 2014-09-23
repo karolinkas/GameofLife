@@ -10,9 +10,11 @@ class Life
 
   end
 
-
-
-
+  def surviver(number_of_neighbours)
+    if number_of_neighbours == 3 || number_of_neighbours == 2
+      return 1 
+    end
+  end
 end
 
 
@@ -33,6 +35,8 @@ describe Life do
 			@life.surviver(4).should_not == 1
 		end
 
-
+    it "should check if neighbours is more than 3" do
+      @life.dier(6).should == 0
+    end
 	end
 end 
